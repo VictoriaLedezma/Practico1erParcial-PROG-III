@@ -1,0 +1,23 @@
+.form--login{
+    border-radius: 2px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.form--login--input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div--errores{
+    background-color: lightgray;
+    border-radius: 2px;
+    border: 1px solid;
+}
+
+.errores--texto{
+    color: red;
+    display: none;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta profesionales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./estilos/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="d-flex justify-content-center">
+                <form class="col-6 form--login" id="formAlta" action="">
+                    <div class="d-flex justify-content-center">
+                        <h3>Alta Profesionales</h3>
+                    </div>
+                    <div class="mb-3 mt-3 d-flex">
+                        <div class="m-2">
+                            <label for="inputNombre" class="form-label">Nombre</label>
+                            <input type="nombre" class="form-control" id="inputNombre">
+                        </div>
+                        <div class="m-2">
+                            <label for="inputApellido" class="form-label">Apellido</label>
+                            <input type="apellido" class="form-control" id="inputApellido">
+                        </div>
+                      </div>
+                    <div class="mb-3 mt-3 d-flex">
+                        <div class="m-2">
+                            <label for="inputDireccion" class="form-label">Direccion</label>
+                            <input type="direccion" class="form-control" id="inputDireccion">
+                        </div>
+                        <div class="m-2">
+                            <label for="inputTipo" class="form-label">Tipo vuelo</label>
+                            <div class="d-flex flex-wrap justify-content-between">
+                                <div class="m-1">
+                                    <input type="radio" name="tipoVuelo" class="col-1 form-label" id="rbtCabotaje" value="Cabotajes" checked>
+                                    <label for="radioCabotaje">Cabotaje</label>
+                                </div>
+                                <div class="m-1">
+                                    <input type="radio" name="tipoVuelo" class="col-1 form-label" id="rbtInternacional" value="Internacional">
+                                    <label for="radioInternacional">Internacional</label>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="mb-2 mt-2">
+                        <div class="m-2">
+                            <label for="inputNacionalidad" class="form-label">Nacionalidad</label>
+                            <select class="form-select" id="selectNacionalidades">
+                                <option selected>Seleccionar</option>
+                                <option value="Argentina">Argentina</option>
+                                <option value="Uruguay">Uruguay</option>
+                                <option value="Chile">Chile</option>
+                              </select>
+                        </div>
+                    </div>
+                    <div class="mb-2 mt-2 d-flex flex-wrap justify-content-center">
+                            <input type="button" class="btn btn-primary m-2 col-12" onclick="Guardar()" value="Guardar">
+                            <a href="./login.html">Volver</a>
+                    </div>
+                    <div class="mb-2 mt-2 div--errores">
+                        <div class="m-2">
+                            <h5 class="text-muted">Errores en el formulario</h5>
+                            <div class="m-2" id="div--errores--texto">
+                                <p class="errores--texto" id="errorNombre">Nombre Invalido</p>
+                                <p class="errores--texto" id="errorApellido">Apellido Invalido</p>
+                                <p class="errores--texto" id="errorHoras">Ingrese horas de vuelo validas</p>
+                                <p class="errores--texto" id="errorNacionalidad">Elija una nacionalidad</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="./scripts/alta.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
